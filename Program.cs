@@ -1,130 +1,145 @@
-﻿namespace day2
+﻿namespace days
 {
     internal class Program
     {
+        //public static void print(string statment)
+        //{
+        //    Console.WriteLine($"hello{statment}");
+        //}
         static void Main(string[] args)
         {
-            #region Flowcontrol
-            //Console.WriteLine("plz enter your Age");
-            //int age= int.Parse(Console.ReadLine());
-            //if (age >= 6 && age <= 18) 
+            #region exception handling
+
+            //try
             //{
-            //    Console.WriteLine("Student at School");
+            //    //int x = int.Parse(Console.ReadLine());
+            //    //int y = int.Parse(Console.ReadLine());
+            //    //float z = x / y;
+            //    //Console.WriteLine($"result ={z}");
+            //    checked
+            //    {
+            //        int s1 = int.MaxValue;
+            //        int s2 = int.MinValue;
+            //        Console.WriteLine(s1);
+            //        Console.WriteLine(s2);
+            //        s1 += s1;
+            //        Console.WriteLine(s1);
+            //    }
             //}
-            //else
+            //catch (DivideByZeroException ex)
             //{
-            //    Console.WriteLine("not Student at school");
+            //    Console.WriteLine($"please enter valid number not zero value");
             //}
-            //Console.WriteLine("plz enter your degreee");
-            //int degreee = int.Parse(Console.ReadLine());
-            //if (degreee >= 50 && degreee <= 75)
+            //catch (OverflowException ex)
             //{
-            //    Console.WriteLine("Good");
+            //    Console.WriteLine($"OverflowException");
             //}
-            //else if (degreee >= 60 && degreee <= 75)
+            //catch (Exception ex)
             //{
-            //    Console.WriteLine("Very Good");
+            //    Console.WriteLine($"Error , Unkown Error {ex}");
             //}
-            //else if (degreee >= 75 && degreee <= 100)
+            //finally
             //{
-            //    Console.WriteLine("EX");
+            //    Console.WriteLine("hello");
             //}
-            //else {
-            //    Console.WriteLine("FAIL");
+            #endregion
+            #region Casting
+            //Conversion -Compatable -NonCompatable
+            //-implict -explict
+            //Conversion - Compatable -implict
+            //byte x = 200;
+            //int y = x;
+            //Console.WriteLine(y);
+
+            ////Conversion -Compatable -explict
+
+            //checked
+            //{
+            //   int z = 300;
+            //   byte s =(byte)z;
+            //   Console.WriteLine(s); 
             //}
 
-            //nested if 
-            //Console.WriteLine("plz enter your name ");
-            //string name = Console.ReadLine();
-            //if (name == "")
+            //try
             //{
-            //    Console.WriteLine("Re enter your name ");
+            //    string str ="1234";
+            //    int x = Convert.ToInt32(str);
+            //    Console.WriteLine(x);
+            //}
+            //catch (FormatException e)
+            //{
+            //    Console.WriteLine("Please Enter Valid Value , Number only");
+            //}
+            //try
+            //{
+            //    string str = null;
+            //    int x = int.Parse(str);
+            //}
+            //catch (ArgumentNullException)
+            //{
+            //    Console.WriteLine("Please Enter Valid Value , nut null");
+            //}
+            //int z;
+            //bool result =int.TryParse("123k",out z);
+            //if (result == true)
+            //{
+            //    Console.WriteLine("valid");
+            //    Console.WriteLine($"value {z}");
             //}
             //else
             //{
-            //    Console.WriteLine("Enter your age");
-            //    int age = int.Parse(Console.ReadLine());
-            //    if (age > 18)
-            //    {
-            //        Console.WriteLine("invaild");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("vaild");
-            //    }
+            //    Console.WriteLine("invalid");
             //}
-            //switch
-            //string gender;
-            //do
-            //{
-            //    Console.WriteLine("Enter your gender ");
-            //    gender = Console.ReadLine();
-            //    switch (gender)
-            //    {
-            //        case "male":
-            //            Console.WriteLine("enter your name ");
-            //            Console.WriteLine("Enter your age");
-            //            Console.WriteLine("you complete army");
-            //            break;
-            //        case "female":
-            //            Console.WriteLine("Re enter your name ");
-            //            Console.WriteLine("Enter your age");
-            //            break;
-            //        default:
-            //            Console.WriteLine("Re choise vaild gender (male or female)");
-            //            break;
-            //    }
-            //}
-            //while (gender != "male" || gender != "female");
+
+
+
+
             #endregion
-            #region looping
-            //for
-            //for (int i = 0; i < 50; i++)
+            #region Array
+            //ID array
+            //Defin
+            //float[] degreeOfStudent = new float[3] {2,2,2};
+            ////syntac suger
+            //float[] degreeOfStudent1 = {2,2,2};
+            //set of array
+            //degreeOfStudent1[0] = 7;
+            //degreeOfStudent1[1] = 10;
+            //degreeOfStudent1[2] = 11;
+            //get from array
+            //Console.WriteLine($"Degree 1:{degreeOfStudent1[0]}");
+            //Console.WriteLine($"Degree 2:{degreeOfStudent1[1]}");
+            //Console.WriteLine($"Degree 3:{degreeOfStudent1[2]}");
+            //for (int i = 0; i < degreeOfStudent1.Length; i++)
             //{
-            //    Console.WriteLine("Hello From BIS");
+            //    Console.WriteLine($"Please Enter degree{i+1}");
+            //    degreeOfStudent1 [i] = int.Parse(Console.ReadLine());
             //}
-            //while
-            //Console.WriteLine("enter inital value");
-            //int value = int.Parse(Console.ReadLine());
-            //while (value < 100) 
+            //for (int i = 0;i < degreeOfStudent1.Length; i++)
             //{
-            //    Console.WriteLine("vaild");
-            //    Console.WriteLine("enter inital value");
-            //    value = int.Parse(Console.ReadLine());
+            //    Console.WriteLine($"degree {i + 1}:{degreeOfStudent1[i]}");
             //}
-            //do-while
-            //int age;
-            //do
+            //2D array
+            //Defin
+            //int[,] ints = new int[3, 3];
+            //for (int i = 0; i < 3; i++)
+            //{ 
+            //    for (int j = 0; j < 3; j++)
+            //    {
+            //        Console.WriteLine($"Please Enter degree{i + 1},{j+1}");
+            //        ints[i, j] = int.Parse(Console.ReadLine());
+            //    }
+            //}
+            //for (int i = 0; i < 3; i++) 
             //{
-            //    Console.WriteLine("enter your age ");
-            //    age = int.Parse(Console.ReadLine());
-            //} while (age < 100);
+            //    for(int j = 0;j < 3; j++)
+            //    {
+            //        Console.WriteLine($"degree {i + 1},{j + 1}:{ints[i,j]}");
+            //    }
+            //}
+
             #endregion
-            #region function
-            //void display()
-            //{
-            //    Console.WriteLine("hello from BIS");
-            //}
-            //display();
-            //void display(string name)
-            //{
-            //    Console.WriteLine($"hello {name}");
-            //}
-            ////display("Omar");
-            //Console.WriteLine($"enter your name ");
-            //string name=Console.ReadLine();
-            //display(name);
-            //int sum(int num1, int num2)
-            //{
-            //    return num1 + num2;
-            //}
-            //Console.WriteLine($"plz enter number 1");
-            //int number1 = int.Parse(Console.ReadLine());
-            //Console.WriteLine($"plz enter number 2");
-            //int number2 = int.Parse(Console.ReadLine());
-            //sum(5, 10);
-            //Console.WriteLine($"sum :{sum(number1, number2)}");
-            #endregion
+            
+            //print("Omar");
         }
     }
 }

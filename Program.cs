@@ -1,145 +1,66 @@
-﻿namespace days
+﻿namespace day4
 {
     internal class Program
     {
-        //public static void print(string statment)
-        //{
-        //    Console.WriteLine($"hello{statment}");
-        //}
         static void Main(string[] args)
         {
-            #region exception handling
+            Console.WriteLine("Hello, World!");
+            ////Account account = new Account();
+            ////account.Maxvalue = 10000;
+            //OutComeBankAccount InComeBankAccount = new OutComeBankAccount();
+            //InComeBankAccount.Maxvalue = 10000;
+            //InComeBankAccount.Balance = 2000;
+            //Console.WriteLine("enter value 1 for deposit");
+            //Console.WriteLine("enter value 2 for withdraw");
+            //int operation = int.Parse(Console.ReadLine());
 
-            //try
+            //switch (operation)
             //{
-            //    //int x = int.Parse(Console.ReadLine());
-            //    //int y = int.Parse(Console.ReadLine());
-            //    //float z = x / y;
-            //    //Console.WriteLine($"result ={z}");
-            //    checked
-            //    {
-            //        int s1 = int.MaxValue;
-            //        int s2 = int.MinValue;
-            //        Console.WriteLine(s1);
-            //        Console.WriteLine(s2);
-            //        s1 += s1;
-            //        Console.WriteLine(s1);
-            //    }
+            //    case 1:
+            //        Console.WriteLine("enter value of deposit");
+            //        int value = int.Parse(Console.ReadLine());
+            //        InComeBankAccount.Deposit(value);
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("enter value of withdraw");
+            //        int value2 = int.Parse(Console.ReadLine());
+            //        InComeBankAccount.Deposit(value2);
+            //        break;
+            //    default:
+            //        Console.WriteLine("Invalid");
+            //        break;
             //}
-            //catch (DivideByZeroException ex)
-            //{
-            //    Console.WriteLine($"please enter valid number not zero value");
-            //}
-            //catch (OverflowException ex)
-            //{
-            //    Console.WriteLine($"OverflowException");
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine($"Error , Unkown Error {ex}");
-            //}
-            //finally
-            //{
-            //    Console.WriteLine("hello");
-            //}
-            #endregion
-            #region Casting
-            //Conversion -Compatable -NonCompatable
-            //-implict -explict
-            //Conversion - Compatable -implict
-            //byte x = 200;
-            //int y = x;
-            //Console.WriteLine(y);
-
-            ////Conversion -Compatable -explict
-
-            //checked
-            //{
-            //   int z = 300;
-            //   byte s =(byte)z;
-            //   Console.WriteLine(s); 
-            //}
-
-            //try
-            //{
-            //    string str ="1234";
-            //    int x = Convert.ToInt32(str);
-            //    Console.WriteLine(x);
-            //}
-            //catch (FormatException e)
-            //{
-            //    Console.WriteLine("Please Enter Valid Value , Number only");
-            //}
-            //try
-            //{
-            //    string str = null;
-            //    int x = int.Parse(str);
-            //}
-            //catch (ArgumentNullException)
-            //{
-            //    Console.WriteLine("Please Enter Valid Value , nut null");
-            //}
-            //int z;
-            //bool result =int.TryParse("123k",out z);
-            //if (result == true)
-            //{
-            //    Console.WriteLine("valid");
-            //    Console.WriteLine($"value {z}");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("invalid");
-            //}
-
-
-
-
-            #endregion
-            #region Array
-            //ID array
-            //Defin
-            //float[] degreeOfStudent = new float[3] {2,2,2};
-            ////syntac suger
-            //float[] degreeOfStudent1 = {2,2,2};
-            //set of array
-            //degreeOfStudent1[0] = 7;
-            //degreeOfStudent1[1] = 10;
-            //degreeOfStudent1[2] = 11;
-            //get from array
-            //Console.WriteLine($"Degree 1:{degreeOfStudent1[0]}");
-            //Console.WriteLine($"Degree 2:{degreeOfStudent1[1]}");
-            //Console.WriteLine($"Degree 3:{degreeOfStudent1[2]}");
-            //for (int i = 0; i < degreeOfStudent1.Length; i++)
-            //{
-            //    Console.WriteLine($"Please Enter degree{i+1}");
-            //    degreeOfStudent1 [i] = int.Parse(Console.ReadLine());
-            //}
-            //for (int i = 0;i < degreeOfStudent1.Length; i++)
-            //{
-            //    Console.WriteLine($"degree {i + 1}:{degreeOfStudent1[i]}");
-            //}
-            //2D array
-            //Defin
-            //int[,] ints = new int[3, 3];
-            //for (int i = 0; i < 3; i++)
-            //{ 
-            //    for (int j = 0; j < 3; j++)
-            //    {
-            //        Console.WriteLine($"Please Enter degree{i + 1},{j+1}");
-            //        ints[i, j] = int.Parse(Console.ReadLine());
-            //    }
-            //}
-            //for (int i = 0; i < 3; i++) 
-            //{
-            //    for(int j = 0;j < 3; j++)
-            //    {
-            //        Console.WriteLine($"degree {i + 1},{j + 1}:{ints[i,j]}");
-            //    }
-            //}
-
-            #endregion
-            
-            //print("Omar");
+            Polymarphism polymarphism = new Polymarphism();
+            Console.WriteLine($"Sum:{polymarphism.sum(3.2f, 3.3f)}");
         }
+}
+     class Account
+    {
+        
+        //field
+       private int _maxValue;
+        private int _balance;
+        public Account()
+        {
+            this._maxValue = 10000;
+        }
+        public int Maxvalue 
+        {
+            set 
+            {
+                if (value != 10000)
+                {
+                    Console.WriteLine("invalid");
+                }
+                _maxValue = value;
+                
+            }
+            get 
+            {
+                return _maxValue;   
+            }
+                
+        }
+
     }
 }
